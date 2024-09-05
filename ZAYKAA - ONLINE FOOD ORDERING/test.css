@@ -1,0 +1,115 @@
+/* Existing styles and variables */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .box {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+  }
+  
+  .box p {
+    font-size: 1.4rem;
+    color: var(--light-color);
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: var(--orange);
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #ff9f43;
+    color: #fff;
+  }
+  
+  /* Additional styles for a food ordering website */
+  .section-title {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+  }
+  
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .menu-item {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+  }
+  
+  .menu-item p {
+    font-size: 1.2rem;
+    color: var(--light-color);
+    margin-bottom: 1rem;
+  }
+  

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruits</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .products {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .product-info {
+      margin-top: 15px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      font-weight: bold;
+      color: #28a745;
+      font-size: 18px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="products" id="products">
+    <!-- Fruits will be displayed here -->
+  </div>
+
+  <script>
+    function displayProducts(productsArray) {
+      const products = document.getElementById("products");
+      productsArray.forEach((product) => {
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("product");
+
+        const img = document.createElement("img");
+        img.src = product.image;
+        img.alt = product.name;
+
+        const productInfo = document.createElement("div");
+        productInfo.classList.add("product-info");
+
+        const productName = document.createElement("h3");
+        productName.textContent = product.name;
+        productName.classList.add("product-name");
+
+        const productPrice = document.createElement("p");
+        productPrice.textContent = "$" + product.price;
+        productPrice.classList.add("product-price");
+
+        const orderButton = document.createElement("button");
+        orderButton.textContent = "Add to Cart";
+        orderButton.addEventListener('click', () => {
+          alert('Item added to cart!');
+        });
+
+        productInfo.appendChild(productName);
+        productInfo.appendChild(productPrice);
+        productInfo.appendChild(orderButton);
+
+        productDiv.appendChild(img);
+        productDiv.appendChild(productInfo);
+
+        products.appendChild(productDiv);
+      });
+    }
+
+    const fruits = [
+      { name: "Apples", price: 1.0, image: "image/cati-4.png" },
+      { name: "Bananas", price: 0.5, image: "image/cati-5.png" },
+      { name: "Oranges", price: 1.5, image: "image/cati-6.png" },
+    ];
+
+    displayProducts(fruits);
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaykaa - Food Ordering Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .description {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- blogs section starts -->
+    <section class="blogs" id="blogs">
+        <h1 class="heading"> our <span>blogs</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/blog-1.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i> by user </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 7th sep, 2023 </a>
+                    </div>
+                    <h3>fresh and organic vegitables and fruits</h3>
+                    <p id="description1" class="description">To explore disruption in the fresh and organic food industry<br>
+                       <br> 1. Developing organic food delivery apps or platforms to make it easier for people to order fresh organic produce.
+                        <br>2. Promoting vertical farming techniques to grow more organic crops on limited land.
+                       <br> 3. Finding sustainable packaging solutions to reduce food waste and protect the environment.
+                        
+                        These are just a few ideas, but if you have a specific area or approach you prefer, let me know! We can delve into that direction and explore more details. 😊🌱🍎</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/blog-2.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i> by user </a>
+                        <a href="#"> <i class="fas fa-calendar"></i>  18 march, 2024 </a>
+                    </div>
+                    <h3>fresh and organic vegitables and fruits</h3>
+                    <p id="description2" class="description">Fresh and organic fruits and vegetables <br>
+                        
+                      <br>  1. Benefits of Fresh and Organic Produce: Discuss the advantages of consuming fresh and organic vegetables and fruits, such as higher nutrient content, better taste, and reduced exposure to harmful pesticides.
+                       <br> 2. Shopping for Fresh Produce: Provide tips on how to select the best quality fresh produce, including checking for ripeness, examining appearance, and understanding organic labeling.
+                       <br> 3. Seasonal Eating: Explore the concept of seasonal eating and the benefits of consuming fruits and vegetables that are in season. Share some delicious recipes that highlight seasonal produce.
+                       <br> 4. Organic Farming Practices: Shed light on organic farming methods, such as crop rotation, composting, and natural pest control, and how they contribute to the production of fresh and chemical-free produce.
+                        
+                       🌱🍎🥦</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/blog-3.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i> by user </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 7 march, 2024 </a>
+                    </div>
+                    <h3>fresh and organic vegitables and fruits</h3>
+                    <p id="description3" class="description">Fresh and organic vegetables and fruits are not only delicious but also incredibly beneficial for our health. Writing a blog about them is a great way to promote their importance and educate others about their benefits.<br>
+
+                       <br> 1. Introduction: Begin by explaining the significance of fresh and organic vegetables and fruits in maintaining a healthy lifestyle.
+                        <br>2. Health Benefits: Dive into the various health benefits of consuming fresh and organic produce, such as providing essential nutrients, boosting immunity, and reducing the risk of chronic diseases.
+                        <br>3. Environmental Impact: Discuss how organic farming practices contribute to sustainability, biodiversity, and the preservation of our planet.
+                        <br>4. Seasonal Eating: Highlight the advantages of consuming seasonal fruits and vegetables, including better taste, higher nutritional value, and support for local farmers.
+                        🌱🍎🥦</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blogs section ends -->
+
+    <script>
+        const readMoreBtns = document.querySelectorAll('.btn');
+        const descriptions = document.querySelectorAll('.description');
+
+        readMoreBtns.forEach((btn, index) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent the default link behavior
+                descriptions[index].classList.toggle('show');
+                btn.textContent = descriptions[index].classList.contains('show') ? 'Read Less' : 'Read More';
+            });
+        });
+    </script>
+</body>
+</html>

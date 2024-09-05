@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Categories</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="test1.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+  
+
+    :root {
+      --orange: #ff7800;
+      --black: #130f40;
+      --light-color: #666;
+      --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+      --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+      --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+      --outline-hover: 0.2rem solid var(--black);
+    }
+
+    /* ... (existing styles) ... */
+
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 0.5rem;
+      box-shadow: var(--box-shadow);
+    }
+
+    .box img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .box h3 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .box p {
+      font-size: 1.4rem;
+      color: var(--light-color);
+      margin-bottom: 1rem;
+    }
+
+    /* ... (existing styles) ... */
+  </style>
+</head>
+<body>
+  <section class="categories" id="categories">
+    <h1 class="heading">product <span>categories</span></h1>
+
+    <div class="box-container">
+      <div class="box">
+        <img src="image/cat-1.png" alt="">
+        <h3>Vegetables</h3>
+        <p>Up to 45% off</p>
+        <a href="vegitable.html" class="btn">Show more</a>
+      </div>
+      <div class="box">
+        <img src="image/cat-2.png" alt="">
+        <h3>Fresh Fruits</h3>
+        <p>Up to 45% off</p>
+        <a href="fruits.html" class="btn">Show more</a>
+      </div>
+      <div class="box">
+        <img src="image/cat-3.png" alt="">
+        <h3>Dairy Products</h3>
+        <p>Up to 45% off</p>
+        <a href="dairy-products.html" class="btn">Show more</a>
+      </div>
+      <div class="box">
+        <img src="image/cat-4.png" alt="">
+        <h3>Fresh Meat</h3>
+        <p>Up to 45% off</p>
+        <a href="fresh-meat.html" class="btn">Show more</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="products" id="products">
+    <!-- Products will be displayed here -->
+  </div>
+
+  <script>
+    // ... (existing JavaScript code) ...
+  </script>
+</body>
+</html>

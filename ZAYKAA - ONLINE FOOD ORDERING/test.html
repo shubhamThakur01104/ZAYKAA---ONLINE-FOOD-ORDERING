@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>features</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .description {
+            display: none;
+            text-align: justify;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- features section starts -->
+    <section class="features" id="features">
+        <h1 class="heading"> our <span>features</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/feature-img-1.png" alt="">
+                <h3>fresh and organic</h3>
+                <p id="description1" class="description">To explore disruption in the fresh and organic food industry,<br>
+                    <br>1. Developing organic food delivery apps or platforms to make it easier for people to order fresh organic produce.
+                    <br>2. Promoting vertical farming techniques to grow more organic crops on limited land.
+                    <br>3. Finding sustainable packaging solutions to reduce food waste and protect the environment.
+                    
+                    <br>These are just a few ideas, but if you have a specific area or approach you prefer, let me know! We can delve into that direction and explore more details. 😊🌱🍎</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <img src="image/feature-img-2.png" alt="">
+                <h3>free delivery</h3>
+                <p id="description2" class="description">Ah, I see! You're interested in exploring the disruption of free delivery on food items. That's a great topic! The concept of free delivery has definitely transformed the way we order food. It has become a common expectation for many customers. <br>
+
+                   
+                   <br> 1. Evolution of delivery services: Explore how the introduction of free delivery has revolutionized the food industry and impacted traditional delivery models.
+                   <br> 2. Customer expectations: Discuss how the availability of free delivery has influenced customer behavior and their preferences when choosing food establishments.
+                   <br> 3. Competitive landscape: Analyze how the rise of free delivery has affected competition among food businesses and how they adapt to meet customer demands.
+                   <br> 4. Operational challenges and costs: Examine the operational challenges and costs that arise for food establishments when offering free delivery and how they manage to maintain profitability.
+                    
+                    Remember, these are just starting points. Feel free to dive deeper into any specific areas that interest you or explore additional aspects of the disruption. Good luck with your project! 🚚🍕😊
+                    
+                    
+                    Free delivery</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <img src="image/feature-img-3.png" alt="">
+                <h3>easy payments</h3>
+                <p id="description3" class="description">Easy payment 
+
+                    Oh, I totally get it! You're interested in exploring the disruption of easy payments in the food industry. That's a fascinating topic! Easy payment options have certainly transformed the way we pay for our food. It has made transactions more convenient and efficient for both customers and businesses.<br>
+                    
+                    
+                    <br>1. Mobile payment solutions: Explore how the introduction of mobile payment apps and digital wallets has revolutionized the food industry, allowing customers to make quick and seamless transactions.
+                    <br>2. Contactless payments: Discuss the impact of contactless payment methods, such as NFC-enabled cards or mobile payments, on the speed and convenience of food transactions.
+                    <br>3. Online ordering and payment: Analyze how the shift towards online ordering platforms has made it easier for customers to browse menus, place orders, and make payments without the need for physical cash.
+                    <br>4. Loyalty and rewards programs: Explore how easy payment options have enabled the integration of loyalty and rewards programs, enhancing customer engagement and incentivizing repeat visits.
+                    
+                    Remember, these are just starting points. Feel free to delve deeper into any specific areas that interest you or explore additional aspects of the disruption. Best of luck with your project! 💳🍔😊</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+    </section>
+    <!-- features section ends -->
+
+    <script>
+        const readMoreBtns = document.querySelectorAll('.btn');
+        const descriptions = document.querySelectorAll('.description');
+
+        readMoreBtns.forEach((btn, index) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent the default link behavior
+                descriptions[index].classList.toggle('show');
+                btn.textContent = descriptions[index].classList.contains('show') ? 'Read Less' : 'Read More';
+            });
+        });
+    </script>
+</body>
+</html>
